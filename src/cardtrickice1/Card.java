@@ -9,7 +9,8 @@ package cardtrickice1;
  * 
  *
  * @author sivagamasrinivasan
- */
+ * @modifier author derrick la
+ * @modifier version 1.0
 public class Card 
 {
     private int value;
@@ -36,6 +37,7 @@ public class Card
      */
     public String getSuits() {
         return suits;
+        
     }
 
     /**
