@@ -10,6 +10,8 @@ package cardtrickice1;
  * step 3: user card is in  the array 'card is found'
  *
  * @author sivagamasrinivasan
+ * @modifier derrick la 
+ * @modifier version 1.0
  */
 public class CardTrickICE1 {
 
