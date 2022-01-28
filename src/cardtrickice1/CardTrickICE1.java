@@ -21,14 +21,37 @@ public class CardTrickICE1 {
      */
     public static void main(String[] args) 
     {
-        Scanner userInput = new Scanner(System.in);
+        //Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter the card's suit: ");
-        String userSuit = userInput.next();
-        int userCard;
+        //String userSuit = userInput.next();
+        //int userCard;
         System.out.println("Please enter the card number form 1 to 13:");
-        userCard = userInput.nextInt();
+        //userCard = userInput.nextInt();
         
-        System.out.println(userSuit +" card number: " + userCard);
+        //System.out.println(userSuit +" card number: " + userCard);
+        
+        Card[] magicHand = new Card[7];
+        for(int i = 0; i < magicHand.length; i++){
+            Card Cards = new Card();
+            
+            Cards.setSuits(Cards.generateSuit());
+            Cards.setValue(Cards.generateCardNum());
+            
+            magicHand[i] = Cards;
+            
+            
+            
+        }
+        
+        
+        for(int i = 0; i < magicHand.length; i++){
+        
+        System.out.println(magicHand[i].getValue() + " "+magicHand[i].getSuits());
+        }
+        
+        
+        
+        
    //     Card[] magicHand = new Card[7]; //Array of object
       //  for( int i=0;i<magicHand.length;i++)
        // {
@@ -39,6 +62,10 @@ public class CardTrickICE1 {
         //step 2:take input 
         
         //step 3: match with array 
+    }
+
+    private static String generateSuit() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
