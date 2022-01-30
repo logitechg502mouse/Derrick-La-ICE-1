@@ -48,7 +48,7 @@ public class Card
     public void setSuits(String suits) {
         this.suits = suits;
     }
-   //number
+   
     
     //method for suits
     public String generateSuit(){
@@ -56,7 +56,7 @@ public class Card
  
     return SUITS[(int)Math.floor(suitNum)];    
     }
-    
+    //method for numbers
     public int generateCardNum(){
         //cardRabdinUpper is used to reduce the chances of consective repeating numbers
     double cardRandomUpper = (int)(1 + Math.random() * 13);
