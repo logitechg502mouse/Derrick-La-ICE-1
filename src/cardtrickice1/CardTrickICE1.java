@@ -8,10 +8,10 @@ import java.util.Scanner;
 
 /** step1 : generate 7 random cards and store in array - how
  * step 2: take any card input from user suit,number
- * step 3: user card is in  the array 'card is found'
+ * step 3: user card is in  the array 'card is found
  *
  * @author sivagamasrinivasan
- * @modifier derrick la 
+ * @modifier derrick la ID: 9915727225
  * @modifier version 1.0
  */
 public class CardTrickICE1 {
@@ -21,7 +21,11 @@ public class CardTrickICE1 {
      */
     public static void main(String[] args) 
     {
-      
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Please enter the card's suit (hearts, spades, diamonds, clubs): ");
+        String userSuit = userInput.next().toLowerCase();      
+        System.out.println("Please enter the card number form 1 to 13:");
+        int userCard = userInput.nextInt();
         
         Card[] magicHand = new Card[7];
         for(int i = 0; i < magicHand.length; i++){
@@ -31,28 +35,23 @@ public class CardTrickICE1 {
             Cards.setValue(Cards.generateCardNum());            
             magicHand[i] = Cards;                   
         }
-         for(int i = 0; i< magicHand.length; i++){
-            System.out.println(magicHand[i].getValue() +" " + magicHand[i].getSuits());     
+        System.out.println("\n------------Cards Generated------------");
+        for(int i = 0; i< magicHand.length; i++){
+            System.out.println(magicHand[i].getValue() +" of " + magicHand[i].getSuits());     
         }
          
-        Scanner userInput = new Scanner(System.in);
-        System.out.println("Please enter the card's suit: ");
-        String userSuit = userInput.next().toLowerCase();      
-        System.out.println("Please enter the card number form 1 to 13:");
-        int userCard = userInput.nextInt();
         boolean inHand = false;
         for(int i = 0; i< magicHand.length; i++){
            if(userCard == magicHand[i].getValue() && userSuit.equalsIgnoreCase(magicHand[i].getSuits())){
                inHand = true;
-           }
-            
+           }         
         }
+        
         if(true == inHand){
-            System.out.println("Great! your card, "+ userCard + " of " + userSuit + " is in this hand.");
-            
+            System.out.println("\nGreat! your card, "+ userCard + " of " + userSuit + ", is in this hand.");      
         }
         else{
-            System.out.println("Sorry. Your card is not in this hand, better luck next time.");
+            System.out.println("\nSorry. Your card is not in this hand, better luck next time.");
         }
         
         
@@ -67,10 +66,5 @@ public class CardTrickICE1 {
         //step 2:take input 
         
         //step 3: match with array 
-    }
-
-    private static String generateSuit() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
+    }         
 }
