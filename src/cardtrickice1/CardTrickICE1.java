@@ -53,7 +53,7 @@ public class CardTrickICE1 {
         else{
             System.out.println("\nSorry. Your card is not in this hand, better luck next time.");
         }
-        
+        //testing
         
     
    //     Card[] magicHand = new Card[7]; //Array of object
