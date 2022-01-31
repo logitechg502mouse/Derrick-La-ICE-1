@@ -9,8 +9,8 @@ package cardtrickice1;
  * 
  *
  * @author sivagamasrinivasan
- * @modifier author derrick la
- * @modifier version 1.0
+ * @modifier author derrick la ID: 9915727225
+ * @modifier version 1.0 
  * 
  */
 public class Card 
@@ -52,17 +52,13 @@ public class Card
     
     //method for suits
     public String generateSuit(){
-    double suitNum = ( Math.random() * 4);
- 
-    return SUITS[(int)Math.floor(suitNum)];    
+        double suitNum = (Math.random() * 4);
+        return SUITS[(int)Math.floor(suitNum)];    
     }
     //method for numbers
     public int generateCardNum(){
-        //cardRabdinUpper is used to reduce the chances of consective repeating numbers
-    double cardRandomUpper = (int)(1 + Math.random() * 13);
-    double cardNum = (1 + Math.random() * cardRandomUpper);
-    return (int)cardNum;
-    
+        double cardNum = (1+ Math.random() * 13);
+        return (int)cardNum;
     }
     
 }
