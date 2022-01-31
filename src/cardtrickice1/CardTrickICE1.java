@@ -54,7 +54,7 @@ public class CardTrickICE1 {
             System.out.println("\nSorry. Your card is not in this hand, better luck next time.");
         }
         //testing
-        
+        //testing2
     
    //     Card[] magicHand = new Card[7]; //Array of object
       //  for( int i=0;i<magicHand.length;i++)
