@@ -23,11 +23,15 @@ public class CardTrickICE1 {
     {
       
         
-         Scanner userInput = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter the card's suit (hearts, spades, diamonds, clubs): ");
         String userSuit = userInput.next().toLowerCase();      
         System.out.println("Please enter the card number form 1 to 13:");
         int userCard = userInput.nextInt();
+        
+        Card luckyCard = new Card();
+        luckyCard.setSuits("hearts");
+        luckyCard.setValue(8);
         
         Card[] magicHand = new Card[7];
         for(int i = 0; i < magicHand.length; i++){
@@ -37,11 +41,14 @@ public class CardTrickICE1 {
             Cards.setValue(Cards.generateCardNum());            
             magicHand[i] = Cards;                   
         }
+        
+        
         System.out.println("\n------------Cards Generated------------");
         for(int i = 0; i< magicHand.length; i++){
             System.out.println(magicHand[i].getValue() +" of " + magicHand[i].getSuits());     
         }
          
+        
         boolean inHand = false;
         for(int i = 0; i< magicHand.length; i++){
            if(userCard == magicHand[i].getValue() && userSuit.equalsIgnoreCase(magicHand[i].getSuits())){
