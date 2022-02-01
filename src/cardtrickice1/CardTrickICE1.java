@@ -22,7 +22,7 @@ public class CardTrickICE1 {
     public static void main(String[] args) 
     {
       
-        
+        //step 2:take input 
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter the card's suit (hearts, spades, diamonds, clubs): ");
         String userSuit = userInput.next().toLowerCase();      
@@ -48,7 +48,7 @@ public class CardTrickICE1 {
             System.out.println(magicHand[i].getValue() +" of " + magicHand[i].getSuits());     
         }
          
-        
+        //step 3: match with array 
         boolean inHand = false;
         for(int i = 0; i< magicHand.length; i++){
            if(userCard == magicHand[i].getValue() && userSuit.equalsIgnoreCase(magicHand[i].getSuits())){
@@ -63,17 +63,8 @@ public class CardTrickICE1 {
             System.out.println("\nSorry. Your card is not in this hand, better luck next time.");
         }
         
+     
         
-    
-   //     Card[] magicHand = new Card[7]; //Array of object
-      //  for( int i=0;i<magicHand.length;i++)
-       // {
-      //      Card c1 = new Card();
-      //      c1.setValue(2);//use a method to generate random *13
-      //      c1.setSuits("hearts");//random method suit 
-      //  }
-        //step 2:take input 
         
-        //step 3: match with array 
     }         
 }
